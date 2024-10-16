@@ -1,0 +1,32 @@
+<script>
+    import { onMount } from 'svelte';
+
+    let datos_del_fetch = []
+    let resultado;
+
+    function calculadora() {
+        let numero1 = prompt("Introduce el primer número")
+        let numero2 = prompt("Introduce el segundo número")
+
+        return Number(numero1) + Number(numero2)
+    }
+
+    onMount(async () => {
+        let respuesta = await fetch('https://jsonplaceholder.typicode.com/users')
+        datos_del_fetch = await respuesta.json()
+        resultado = calculadora()
+        console.log(datos_del_fetch)
+    });
+
+
+</script>
+
+Vamos a hacer un loop para cada objeto de la lista
+que nos envió el json
+<h1>Siento que me estoy confundiendo pero entiendo la lógica</h1>
+
+{#each datos_del_fetch as elemento}
+{elemento.name}
+{/each}
+
+<p>El resultado es: {resultado}</p>
