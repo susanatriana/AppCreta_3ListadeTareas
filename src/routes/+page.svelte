@@ -67,7 +67,7 @@
 let isChecked = false
 
 </script>
-
+<main>
 <h1>Lista de tareas</h1>
 <input type ="text" placeholder= "Escribe una tarea aqui" bind:value={tarea}>
 <button on:click={agregarTarea}>Agregar</button>
@@ -86,6 +86,7 @@ let isChecked = false
     {/each}
 
 </ul>
+</main>
 
 
 <style>
@@ -96,7 +97,7 @@ let isChecked = false
     text-align: center;
    }
 
-   input[type-"text"] {
+   input[type="text"] {
     width: calc()100% - 100px;
     padding: 0.5rem;
     margin-right: 0.5rem;
