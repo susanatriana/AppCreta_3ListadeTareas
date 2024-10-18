@@ -34,6 +34,7 @@
                   completado: false   
                 })
             })
+        obtenerDatos()
         tarea = ""
 
         }
